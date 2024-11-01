@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Finder - Products</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="logo">Beauty Finder</div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="#footer">About Us</a>
+            <a href="#footer">Contact</a>
+            <a href="cart.html" class="cart-link">🛒 Cart</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Discover Your Perfect Beauty Products</h1>
+        <div class="picture-space">
+          <img src="shineunsoo.jpeg" alt="Beauty Products">
+          <img src="kazuha.jpeg" alt="Beauty Product 1">
+          <img src="jisoo.jpeg" alt="Beauty Product 2">
+        </div>
+      
+        <div class="filter-section">
+            <input type="number" id="price-input" placeholder="Max price">
+            <button id="filter-button">Filter</button>
+        </div>
+        <div>
+            <label for="brand-filter">Filter by Brand:</label>
+            <select id="brand-filter">
+                <option value="">All Brands</option>
+               <!-- Options will be dynamically populated -->
+            </select>
+        </div>
+        <div id="product-list"></div>
+    </main>
+
+    <!-- Scroll Buttons -->
+    <div class="scroll-buttons">
+        <button id="scroll-up">↑ Scroll Up</button>
+        <button id="scroll-down">↓ Scroll Down</button>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Beauty Finder. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/yourprofile" target="_blank">
+                    <img src="iglogo.png" alt="Instagram Logo" class="social-icon">
+                </a>
+                <a href="https://www.facebook.com/yourprofile" target="_blank">
+                    <img src="facebooklogo.png" alt="Facebook Logo" class="social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                    <img src="linkedinlogo.png" alt="LinkedIn Logo" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="renderer.js"></script>
+    <script>
+        // Scroll functionality
+        document.getElementById('scroll-up').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.getElementById('scroll-down').addEventListener('click', function() {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
